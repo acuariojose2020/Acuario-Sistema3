@@ -54,7 +54,7 @@ int ERROR_CAYENNE=0;
  
       
 //#define ssid      "MiFibra-F870"      // WiFi SSID
-//#define password  "P9EnMuxD"  // WiFi password
+//#define password  "mi clave wifi"  // WiFi password
 //#define DHTTYPE   DHT22           // DHT type (DHT11, DHT22)
 //#define DHTPIN    D0              // Broche du DHT / DHT Pin
 const uint8_t GPIOPIN[4] = {D4,D6,D7,D8};  // cambiar D4 a D5
