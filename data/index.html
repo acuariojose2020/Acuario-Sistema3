@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Acuario-Sistema3</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+        <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css"> -->
+        <!-- <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script> -->
+
+      <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.js"></script> -->
+    <script src="js/bootstrap-table.min.js"></script>
+  <!-- <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.css"> -->
+    <link rel="stylesheet" href="css/bootstrap-table.min.css">
+
+
+      <link rel="stylesheet" href="css/acuario.css">
+
+</head>
+
+<body>
+        <!-- Div that shows messages back to user -->
+      <div id="messageBox" style="display: none; bottom: 10px; width: 100%; position: fixed; z-index: 990; text-align: center; padding: 20px; color: #ffffff; border: 0px solid black">
+      <span id="messageBox_inner" style="padding: 16px; border: 1px solid black"></span>
+      </div>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Acuario-S3</h3>
+                <strong>A3</strong>
+            </div>
+
+            <!-- <ul class="nav navbar-nav2 ml-auto" > -->
+            <ul class="list-unstyled components ">
+                <li >
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </a>
+                    <ul class="collapse.show list-unstyled" id="homeSubmenu">
+                        <li   id="but_temporizadores"   >
+                            <a  href="#" class="seleccionado"  >Timers</a>
+                        </li>
+                        <li id="but_menu1"   >
+                            <a  href="#"  >Menu 1</a>
+                        </li>
+                        <li id="but_menu2">
+                            <a href="#" >Menu 2  </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-briefcase"></i>
+                        About
+                    </a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-copy"></i>
+                        Pages
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li id="but_sidepage1">
+                            <a >Page 1</a>
+                        </li>
+                        <li id="but_sidepage2">
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-image"></i>
+                        Portfolio
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-question"></i>
+                        FAQ
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-paper-plane"></i>
+                        Contact
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="https://gihub.com" class="download">Download source</a>
+                </li>
+                <li>
+                    <a href="https://github.com" class="article">Back to article</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav  class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fas fa-align-left"></i>
+                        <span></span>
+                    </button>
+                   <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div  class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto" >
+                            <li id="but_page1" class="nav-item ">
+                                <a class="nav-link  " href="#">Timers</a>
+                            </li>
+                            <li id="but_page2" class="nav-item active">
+                                <a class="nav-link " href="#">Page2</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+
+          <!--aquí el código para los diferentes menus -->
+          <div id="temporizadores" class="collapse multi-collapse" >
+          </div>
+          <div id="menu1" class="collapse multi-collapse" >
+          </div>
+          <div id="menu2" class="collapse multi-collapse" >
+          </div>
+            <!--aquí el código para los diferentes menus -->
+
+            </div>
+
+
+    <script type="text/javascript">
+
+
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+
+
+             $(".navbar-nav li a").click(function(){
+        	      $('.navbar-nav').find(".active").removeClass("active");
+        	       $(this).parent().addClass("active");
+               });
+
+               $("#sidebar a").on("click", function() {
+                 $('#sidebar').find(".seleccionado").removeClass("seleccionado");
+                 $(this).addClass("seleccionado" );
+               });
+
+              //primero cargo la página principal
+              $('.collapse').removeClass('show');
+              $('#temporizadores').collapse('show');
+              $('#temporizadores').load("html/div_temporizadores.html");
+
+            //funciones para ocultar las div
+            $('#but_temporizadores, #but_page1').click(function() {
+              $('.collapse').removeClass('show');
+              $('#temporizadores').collapse('show');
+              $('#temporizadores').load("html/div_temporizadores.html");
+            });
+            $('#but_menu1, #but_page2').click(function() {
+              $('.collapse').removeClass('show');
+              $('#menu1').collapse('show');
+              $('#menu1').load("html/div_menu1.html");
+            });
+            $('#but_menu2').click(function() {
+                $('.collapse').removeClass('show');
+                $('#menu2').collapse('show');
+                $('#menu2').load("html/div_menu2.html");
+            });
+
+            $('#but:page1').click(function(){
+              $('.collapse').removeClass('show');
+              //....
+             });
+
+
+
+
+        });
+
+
+
+    </script>
+
+
+</body>
+
+</html>
